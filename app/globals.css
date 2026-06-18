@@ -577,7 +577,7 @@ a { text-decoration: none; color: inherit; }
   justify-content: space-between;
   align-items: flex-start;
   gap: 8px;
-  font-size: 11.5px;
+  font-size: 13px;
   color: rgba(255,255,255,0.92);
   line-height: 1.4;
 }
@@ -588,7 +588,7 @@ a { text-decoration: none; color: inherit; }
   flex: 1;
 }
 .oferta-item-preco {
-  font-size: 10.5px;
+  font-size: 12px;
   font-weight: 700;
   color: #FF8A80;
   text-decoration: line-through;
@@ -603,7 +603,7 @@ a { text-decoration: none; color: inherit; }
   gap: 5px;
   margin-bottom: 4px;
   text-align: left;
-  font-size: 12px;
+  font-size: 13.5px;
   color: rgba(255,255,255,0.88);
 }
 .oferta-divider {
@@ -613,7 +613,7 @@ a { text-decoration: none; color: inherit; }
   margin: 12px 0 10px;
 }
 .oferta-total-label {
-  font-size: 12.5px;
+  font-size: 14px;
   color: rgba(255,255,255,0.65);
   margin-bottom: 2px;
 }
@@ -623,12 +623,12 @@ a { text-decoration: none; color: inherit; }
   color: rgba(255,255,255,0.70);
 }
 .oferta-total-call {
-  font-size: 13px;
+  font-size: 14.5px;
   color: rgba(255,255,255,0.80);
   margin-bottom: 4px;
 }
 .oferta-access-info {
-  font-size: 10px;
+  font-size: 11.5px;
   color: rgba(255,255,255,0.70);
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -645,7 +645,7 @@ a { text-decoration: none; color: inherit; }
   flex-direction: column;
   align-items: center;
   gap: 3px;
-  font-size: 10px;
+  font-size: 11.5px;
   color: rgba(255,255,255,0.65);
   text-align: center;
 }
