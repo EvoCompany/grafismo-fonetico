@@ -84,7 +84,7 @@ a { text-decoration: none; color: inherit; }
 /* ─── HERO ─── */
 .hero {
   background: linear-gradient(160deg, #1565C0 0%, #1976D2 50%, #42A5F5 100%);
-  padding: 44px 0 50px;
+  padding: 0 0 50px;
   text-align: center;
   position: relative;
   overflow: hidden;

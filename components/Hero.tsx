@@ -2,54 +2,49 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <>
-      {/* Mockup principal — alinhado ao container da headline */}
-      <div style={{ background: "#fff", padding: "0 20px" }}>
-        <div style={{ maxWidth: "860px", margin: "0 auto", lineHeight: 0 }}>
+    <section className="hero">
+      <div className="container">
+        {/* Mockup: respiro no topo, espaço reduzido até a headline */}
+        <div style={{ paddingTop: "32px", marginBottom: "20px", lineHeight: 0 }}>
           <Image
             src="/images/mockup-principal.png"
             alt="Kit Educakids360 — Método Grafismo Fonético"
             width={1365}
             height={738}
             priority
-            style={{ width: "100%", height: "auto", display: "block" }}
+            style={{ width: "100%", height: "auto", display: "block", borderRadius: "12px" }}
           />
         </div>
-      </div>
 
-      {/* Headline e CTA */}
-      <section className="hero">
-        <div className="container">
-          <span className="tag">✨ Educakids360 — Grafismo Fonético</span>
-          <h1 className="hero-titulo">
-            A técnica que ensina seu filho
-            <br />a ler <em>até 5× mais rápido</em>,<br />
-            sem pressão nem estresse!
-          </h1>
-          <p className="hero-sub">
-            Funciona com apenas{" "}
-            <strong style={{ color: "#FFD54F" }}>10 minutos por dia</strong> —
-            para crianças de 2 a 12 anos
-          </p>
+        <span className="tag">✨ Educakids360 — Grafismo Fonético</span>
+        <h1 className="hero-titulo">
+          A técnica que ensina seu filho
+          <br />a ler <em>até 5× mais rápido</em>,<br />
+          sem pressão nem estresse!
+        </h1>
+        <p className="hero-sub">
+          Funciona com apenas{" "}
+          <strong style={{ color: "#FFD54F" }}>10 minutos por dia</strong> —
+          para crianças de 2 a 12 anos
+        </p>
 
-          <div className="hero-badges">
-            <span className="hero-badge-item">👧 2 a 12 anos</span>
-            <span className="hero-badge-item">⏰ 10 min/dia</span>
-            <span className="hero-badge-item">📲 Acesso imediato</span>
-            <span className="hero-badge-item">♾️ Acesso vitalício</span>
-          </div>
-
-          <a href="#oferta" className="btn-cta">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-              <path d="M12 2L2 7l10 5 10-5-10-5z" />
-              <path d="M2 17l10 5 10-5" />
-              <path d="M2 12l10 5 10-5" />
-            </svg>
-            Quero Meu Filho Lendo Rápido!
-          </a>
-          <p className="cta-abaixo">🔒 Compra 100% segura • Acesso imediato por e-mail</p>
+        <div className="hero-badges">
+          <span className="hero-badge-item">👧 2 a 12 anos</span>
+          <span className="hero-badge-item">⏰ 10 min/dia</span>
+          <span className="hero-badge-item">📲 Acesso imediato</span>
+          <span className="hero-badge-item">♾️ Acesso vitalício</span>
         </div>
-      </section>
-    </>
+
+        <a href="#oferta" className="btn-cta">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+            <path d="M2 17l10 5 10-5" />
+            <path d="M2 12l10 5 10-5" />
+          </svg>
+          Quero Meu Filho Lendo Rápido!
+        </a>
+        <p className="cta-abaixo">🔒 Compra 100% segura • Acesso imediato por e-mail</p>
+      </div>
+    </section>
   );
 }
