@@ -3,16 +3,18 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <>
-      {/* Mockup principal — full-width, fundo branco, sem bordas */}
-      <div style={{ background: "#fff", lineHeight: 0, width: "100%" }}>
-        <Image
-          src="/images/mockup-principal.png"
-          alt="Kit Educakids360 — Método Grafismo Fonético"
-          width={1365}
-          height={738}
-          priority
-          style={{ width: "100%", height: "auto", display: "block" }}
-        />
+      {/* Mockup principal — alinhado ao container da headline */}
+      <div style={{ background: "#fff", padding: "0 20px" }}>
+        <div style={{ maxWidth: "860px", margin: "0 auto", lineHeight: 0 }}>
+          <Image
+            src="/images/mockup-principal.png"
+            alt="Kit Educakids360 — Método Grafismo Fonético"
+            width={1365}
+            height={738}
+            priority
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
       </div>
 
       {/* Headline e CTA */}
