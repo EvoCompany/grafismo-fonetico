@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-logo">📚 Kit Grafismo Fonético V2</div>
+      <div className="footer-logo">📚 Educakids360 — Grafismo Fonético</div>
       <p style={{ marginBottom: "8px" }}>
-        © 2024 Editora Inove — Todos os direitos reservados
+        © 2025 Educakids360 — Todos os direitos reservados
       </p>
       <p style={{ marginBottom: "16px" }}>
         <a href="#">Política de Privacidade</a> &nbsp;|&nbsp;

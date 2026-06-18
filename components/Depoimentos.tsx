@@ -40,7 +40,7 @@ export default function Depoimentos() {
           <h2 className="titulo">O que as mães estão dizendo</h2>
           <p className="subtitulo mx-auto">
             Mais de 3.000 famílias já transformaram o aprendizado dos seus
-            filhos com o Kit Grafismo Fonético.
+            filhos com o Educakids360 — Método Grafismo Fonético.
           </p>
         </div>
         <div className="depoimentos-grid">

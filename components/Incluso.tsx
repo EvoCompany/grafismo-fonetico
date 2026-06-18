@@ -16,11 +16,11 @@ export default function Incluso() {
           <h2 className="titulo">
             Tudo que vem no
             <br />
-            Kit Grafismo Fonético V2
+            Kit Educakids360
           </h2>
           <p className="subtitulo mx-auto">
-            Mais de 100 atividades organizadas por nível de dificuldade, em PDF
-            pronto para imprimir quantas vezes quiser.
+            Mais de 100 atividades de Grafismo Fonético organizadas por nível de
+            dificuldade, em PDF pronto para imprimir quantas vezes quiser.
           </p>
         </div>
         <div className="incluso-grid">

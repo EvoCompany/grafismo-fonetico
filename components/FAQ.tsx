@@ -4,12 +4,12 @@ import { useState } from "react";
 
 const perguntas = [
   {
-    q: "Para qual idade é indicado o Kit Grafismo Fonético?",
+    q: "Para qual idade é indicado o Kit Educakids360?",
     a: "O kit é indicado para crianças de 2 a 12 anos. Os materiais são organizados por nível de dificuldade (2, 3 e 4 sílabas), então você pode começar pelo nível adequado para a idade e o desenvolvimento do seu filho.",
   },
   {
     q: "Funciona para crianças com TDAH ou autismo?",
-    a: "Sim! O método fonético multissensorial é especialmente eficaz para crianças com TDAH, autismo e outras dificuldades de aprendizagem. A combinação de estímulos visuais, motores e auditivos facilita o foco e a retenção.",
+    a: "Sim! O método Grafismo Fonético multissensorial é especialmente eficaz para crianças com TDAH, autismo e outras dificuldades de aprendizagem. A combinação de estímulos visuais, motores e auditivos facilita o foco e a retenção.",
   },
   {
     q: "Como vou receber o material após a compra?",
@@ -17,7 +17,7 @@ const perguntas = [
   },
   {
     q: "Preciso de muito tempo para aplicar o método?",
-    a: "Não! O Kit Grafismo Fonético foi desenvolvido para funcionar com apenas 10 minutos por dia. Essa consistência é mais eficaz do que longas sessões de estudo ocasionais.",
+    a: "Não! O Kit Educakids360 foi desenvolvido para funcionar com apenas 10 minutos por dia. Essa consistência é mais eficaz do que longas sessões de estudo ocasionais.",
   },
   {
     q: "E se eu não gostar? Existe garantia?",
@@ -61,7 +61,7 @@ export default function FAQ() {
             Ainda tem dúvidas? Fale com a gente!
           </p>
           <a href="#oferta" className="btn-cta">
-            🚀 Garantir meu Kit Agora — R$ 37,90
+            🚀 Garantir meu Kit Educakids360 Agora!
           </a>
           <p className="cta-abaixo dark" style={{ marginTop: "12px" }}>
             🔒 7 dias de garantia • Acesso imediato • Sem risco

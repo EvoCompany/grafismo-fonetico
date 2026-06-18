@@ -19,7 +19,7 @@ export default function Bonus() {
             sem custo adicional!
           </h2>
           <p className="subtitulo mx-auto">
-            Ao adquirir o Kit Grafismo Fonético V2 hoje, você recebe
+            Ao adquirir o Kit Educakids360 hoje, você recebe
             GRATUITAMENTE estes 6 bônus avaliados em R$ 256,00
           </p>
         </div>

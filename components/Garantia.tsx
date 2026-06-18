@@ -8,7 +8,7 @@ export default function Garantia() {
             <h2>Garantia Total de 7 Dias</h2>
             <p>
               Você tem <strong>7 dias completos</strong> para testar o Kit
-              Grafismo Fonético V2 sem nenhum risco. Se por qualquer motivo não
+              Educakids360 sem nenhum risco. Se por qualquer motivo não
               ficar satisfeita, basta enviar um e-mail e devolvemos 100% do seu
               investimento — sem perguntas, sem letras miúdas, sem complicação.
             </p>

@@ -156,6 +156,26 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ─── CTA BUTTON ─── */
+@keyframes pulsar {
+  0%, 100% {
+    box-shadow: 0 6px 30px rgba(255,109,0,0.50);
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    box-shadow: 0 10px 48px rgba(255,109,0,0.75);
+    transform: scale(1.025) translateY(-2px);
+  }
+}
+@keyframes pulsar-destaque {
+  0%, 100% {
+    box-shadow: 0 6px 30px rgba(255,213,79,0.52);
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    box-shadow: 0 10px 48px rgba(255,213,79,0.82);
+    transform: scale(1.025) translateY(-2px);
+  }
+}
 .btn-cta {
   display: inline-flex;
   align-items: center;
@@ -168,23 +188,35 @@ a { text-decoration: none; color: inherit; }
   font-weight: 900;
   padding: 18px 36px;
   border-radius: 50px;
-  box-shadow: 0 6px 30px rgba(255,109,0,0.50);
-  border: none;
+  border: 2px solid rgba(255,255,255,0.45);
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   position: relative;
   z-index: 1;
   text-align: center;
   line-height: 1.2;
+  animation: pulsar 2s ease-in-out infinite;
+  will-change: transform, box-shadow;
+}
+.btn-cta--destaque {
+  background: linear-gradient(135deg, #FFD54F 0%, #FF8F00 100%);
+  color: #1A237E;
+  border: 2px solid rgba(255,213,79,0.80);
+  animation-name: pulsar-destaque;
 }
 .btn-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 40px rgba(255,109,0,0.60);
+  animation-play-state: paused;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 45px rgba(255,109,0,0.65);
   background: linear-gradient(135deg, #E65100 0%, #FF6D00 100%);
 }
-.btn-cta:active { transform: translateY(0); }
+.btn-cta--destaque:hover {
+  background: linear-gradient(135deg, #FFE082 0%, #FF8F00 100%);
+  box-shadow: 0 12px 45px rgba(255,213,79,0.70);
+}
+.btn-cta:active { transform: translateY(0) scale(1); animation-play-state: paused; }
 .cta-abaixo {
   font-size: 13px;
   color: rgba(255,255,255,0.75);
@@ -444,6 +476,47 @@ a { text-decoration: none; color: inherit; }
 }
 .garantia-icon { font-size: 28px; }
 
+/* ─── OFERTA CARDS DUPLOS ─── */
+.oferta-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 24px 0;
+  align-items: start;
+}
+.oferta-card {
+  background: rgba(255,255,255,0.10);
+  border: 2px solid rgba(255,255,255,0.28);
+  border-radius: 20px;
+  padding: 24px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.oferta-card--destaque {
+  background: rgba(255,255,255,0.17);
+  border: 3px solid #FFD54F;
+  box-shadow: 0 0 30px rgba(255,213,79,0.28);
+}
+.oferta-card-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.40);
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+.oferta-card-tag--destaque {
+  background: #FFD54F;
+  border-color: #FFD54F;
+  color: #1A237E;
+}
+
 /* ─── GARANTIA SECTION ─── */
 .garantia-box {
   background: var(--verde-claro);
@@ -568,12 +641,41 @@ a { text-decoration: none; color: inherit; }
   .solucao-img { order: -1; }
   .garantia-box { flex-direction: column; text-align: center; padding: 28px 20px; }
   .garantia-icone { font-size: 56px; }
-  .oferta-box { padding: 36px 24px; }
+  .oferta-box { padding: 36px 20px; }
   .bonus-item { flex-wrap: wrap; }
   .bonus-valor { width: 100%; }
   .hero { padding: 50px 0 40px; }
+  .oferta-cards-grid { grid-template-columns: 1fr; gap: 16px; }
 }
 @media (max-width: 390px) {
   .hero-titulo { font-size: 26px; }
   .btn-cta { font-size: 15px; padding: 16px 24px; }
+}
+
+/* ─── TABLET (641px – 1023px) ─── */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .section { padding: 56px 0; }
+  .hero { padding: 64px 0 56px; }
+  .container { padding: 0 32px; }
+  .oferta-cards-grid { gap: 24px; }
+  .oferta-box { padding: 44px 36px; }
+  .hero-img-wrap { max-width: 360px; }
+  .problema-grid { grid-template-columns: repeat(2, 1fr); }
+  .incluso-grid { grid-template-columns: repeat(3, 1fr); }
+  .beneficios-grid { grid-template-columns: repeat(2, 1fr); }
+  .depoimentos-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ─── DESKTOP (1024px+) ─── */
+@media (min-width: 1024px) {
+  .section { padding: 72px 0; }
+  .hero { padding: 80px 0 70px; }
+  .container { padding: 0 40px; }
+  .oferta-box { padding: 56px 48px; }
+  .oferta-cards-grid { gap: 28px; }
+  .hero-img-wrap { max-width: 380px; }
+  .problema-grid { grid-template-columns: repeat(2, 1fr); }
+  .incluso-grid { grid-template-columns: repeat(3, 1fr); }
+  .beneficios-grid { grid-template-columns: repeat(3, 1fr); }
+  .depoimentos-grid { grid-template-columns: repeat(3, 1fr); }
 }

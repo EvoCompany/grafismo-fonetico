@@ -12,42 +12,68 @@ export default function Oferta() {
             className="titulo"
             style={{
               color: "white",
-              fontSize: "clamp(24px,4vw,38px)",
-              marginBottom: "8px",
+              fontSize: "clamp(22px,4vw,36px)",
+              marginBottom: "4px",
             }}
           >
-            Kit Grafismo Fonético V2
-            <br />+ 6 Bônus Exclusivos
+            Escolha seu Kit Educakids360
           </h2>
+          <p style={{ color: "rgba(255,255,255,0.78)", fontSize: "15px", marginBottom: "8px" }}>
+            Método Grafismo Fonético — Aprenda a ler de forma natural e eficaz
+          </p>
 
           <Countdown />
 
-          <div className="oferta-de">De R$ 453,00 (valor total)</div>
-          <div className="oferta-por">R$ 37,90</div>
-          <div className="oferta-parcel">ou 5× de R$ 8,39 sem juros</div>
+          <div className="oferta-cards-grid">
+            {/* Plano Básico */}
+            <div className="oferta-card">
+              <span className="oferta-card-tag">Kit Básico</span>
+              <div className="oferta-de" style={{ marginTop: "14px" }}>De R$ 197,00</div>
+              <div className="oferta-por">R$ 27,90</div>
+              <div className="oferta-parcel">ou 4× de R$ 7,97 sem juros</div>
+              <div className="oferta-incluso" style={{ marginBottom: "20px" }}>
+                <span className="oferta-tag">✅ Kit Educakids360 Completo</span>
+                <span className="oferta-tag">📲 Acesso Imediato</span>
+                <span className="oferta-tag">♾️ Acesso Vitalício</span>
+                <span className="oferta-tag">🖨️ Imprima quando quiser</span>
+              </div>
+              <a
+                href="https://pay.cakto.com.br/5vkagcf"
+                className="btn-cta"
+                style={{ width: "100%", fontSize: "clamp(13px,2.5vw,16px)", padding: "15px 20px" }}
+              >
+                QUERO O KIT BÁSICO
+              </a>
+              <p className="cta-abaixo" style={{ color: "rgba(255,255,255,0.65)", marginTop: "10px", fontSize: "12px" }}>
+                🔒 Pagamento 100% seguro
+              </p>
+            </div>
 
-          <div className="oferta-incluso">
-            <span className="oferta-tag">✅ Kit Grafismo Fonético V2</span>
-            <span className="oferta-tag">🎁 6 Cadernos Bônus</span>
-            <span className="oferta-tag">📲 Acesso Imediato</span>
-            <span className="oferta-tag">♾️ Vitalício</span>
-            <span className="oferta-tag">🖨️ Imprima quando quiser</span>
+            {/* Plano Completo */}
+            <div className="oferta-card oferta-card--destaque">
+              <span className="oferta-card-tag oferta-card-tag--destaque">⭐ Mais Completo</span>
+              <div className="oferta-de" style={{ marginTop: "14px" }}>De R$ 453,00 (valor total)</div>
+              <div className="oferta-por">R$ 37,90</div>
+              <div className="oferta-parcel">ou 5× de R$ 8,39 sem juros</div>
+              <div className="oferta-incluso" style={{ marginBottom: "20px" }}>
+                <span className="oferta-tag">✅ Kit Educakids360 Completo</span>
+                <span className="oferta-tag">🎁 6 Cadernos Bônus</span>
+                <span className="oferta-tag">📲 Acesso Imediato</span>
+                <span className="oferta-tag">♾️ Acesso Vitalício</span>
+                <span className="oferta-tag">🖨️ Imprima quando quiser</span>
+              </div>
+              <a
+                href="https://pay.cakto.com.br/9sw8c9t_794481"
+                className="btn-cta btn-cta--destaque"
+                style={{ width: "100%", fontSize: "clamp(13px,2.5vw,16px)", padding: "15px 20px" }}
+              >
+                QUERO O KIT COMPLETO + BÔNUS!
+              </a>
+              <p className="cta-abaixo" style={{ color: "rgba(255,255,255,0.65)", marginTop: "10px", fontSize: "12px" }}>
+                🔒 Cartão, PIX ou boleto
+              </p>
+            </div>
           </div>
-
-          <a
-            href="https://pay.cakto.com.br/SEU_LINK_AQUI"
-            className="btn-cta"
-            style={{ fontSize: "clamp(17px,3vw,22px)", padding: "20px 48px" }}
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-              <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
-              <line x1="1" y1="10" x2="23" y2="10" />
-            </svg>
-            QUERO GARANTIR MEU KIT AGORA!
-          </a>
-          <p className="cta-abaixo" style={{ color: "rgba(255,255,255,0.7)", marginTop: "14px" }}>
-            🔒 Pagamento 100% seguro • Cartão, PIX ou boleto
-          </p>
 
           <div className="garantia-strip">
             <span className="garantia-icon">🛡️</span>

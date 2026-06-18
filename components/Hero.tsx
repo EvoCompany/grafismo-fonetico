@@ -2,24 +2,7 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="container">
-        <span className="tag">✨ Método Americano Comprovado</span>
-        <h1 className="hero-titulo">
-          A técnica que ensina seu filho
-          <br />a ler <em>até 5× mais rápido</em>,<br />
-          sem pressão nem estresse!
-        </h1>
-        <p className="hero-sub">
-          Funciona com apenas{" "}
-          <strong style={{ color: "#FFD54F" }}>10 minutos por dia</strong> —
-          para crianças de 2 a 12 anos
-        </p>
-
-        <div className="hero-badges">
-          <span className="hero-badge-item">👧 2 a 12 anos</span>
-          <span className="hero-badge-item">⏰ 10 min/dia</span>
-          <span className="hero-badge-item">📲 Acesso imediato</span>
-          <span className="hero-badge-item">♾️ Acesso vitalício</span>
-        </div>
+        <span className="tag">✨ Educakids360 — Grafismo Fonético</span>
 
         <div className="hero-img-wrap">
           <svg
@@ -45,10 +28,28 @@ export default function Hero() {
             <text x="80" y="141" fontFamily="Fredoka One, cursive" fontSize="38" fill="#1565C0" opacity="0.7">E e F f</text>
             <text x="80" y="174" fontFamily="Fredoka One, cursive" fontSize="38" fill="#1976D2" opacity="0.6">G g H h</text>
             <rect x="0" y="210" width="340" height="70" rx="0" fill="#1565C0" />
-            <text x="170" y="240" fontFamily="Fredoka One, cursive" fontSize="18" fill="white" textAnchor="middle">Kit Grafismo Fonético V2</text>
-            <text x="170" y="262" fontFamily="Nunito, sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)" textAnchor="middle">+100 Atividades • Educação Kids</text>
+            <text x="170" y="240" fontFamily="Fredoka One, cursive" fontSize="18" fill="white" textAnchor="middle">Educakids360</text>
+            <text x="170" y="262" fontFamily="Nunito, sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)" textAnchor="middle">Método Grafismo Fonético • +100 Atividades</text>
             <text x="170" y="35" fontSize="28" textAnchor="middle" fill="#FFD54F">⭐⭐⭐⭐⭐</text>
           </svg>
+        </div>
+
+        <h1 className="hero-titulo">
+          A técnica que ensina seu filho
+          <br />a ler <em>até 5× mais rápido</em>,<br />
+          sem pressão nem estresse!
+        </h1>
+        <p className="hero-sub">
+          Funciona com apenas{" "}
+          <strong style={{ color: "#FFD54F" }}>10 minutos por dia</strong> —
+          para crianças de 2 a 12 anos
+        </p>
+
+        <div className="hero-badges">
+          <span className="hero-badge-item">👧 2 a 12 anos</span>
+          <span className="hero-badge-item">⏰ 10 min/dia</span>
+          <span className="hero-badge-item">📲 Acesso imediato</span>
+          <span className="hero-badge-item">♾️ Acesso vitalício</span>
         </div>
 
         <a href="#oferta" className="btn-cta">
