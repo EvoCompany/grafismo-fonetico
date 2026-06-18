@@ -1,5 +1,15 @@
 import Countdown from "./Countdown";
 
+const itensCompleto = [
+  { nome: "Atividades de Grafismo Fonético Nível 1, 2 e 3", valor: "R$ 197,00" },
+  { nome: "Bônus 01: Caderno do Alfabeto com Imagens", valor: "R$ 37,00" },
+  { nome: "Bônus 02: Caderno Quebra-Cabeça do Alfabeto", valor: "R$ 47,00" },
+  { nome: "Bônus 03: Caderno de Formação de Palavras", valor: "R$ 57,00" },
+  { nome: "Bônus 04: Caderno Relógio do Alfabeto", valor: "R$ 39,00" },
+  { nome: "Bônus 05: Caderno de Pontilhado do Alfabeto", valor: "R$ 27,00" },
+  { nome: "Bônus 06: Caderno Carinhas do Alfabeto", valor: "R$ 49,00" },
+];
+
 export default function Oferta() {
   return (
     <section className="section" id="oferta">
@@ -10,11 +20,7 @@ export default function Oferta() {
           </span>
           <h2
             className="titulo"
-            style={{
-              color: "white",
-              fontSize: "clamp(22px,4vw,36px)",
-              marginBottom: "4px",
-            }}
+            style={{ color: "white", fontSize: "clamp(22px,4vw,36px)", marginBottom: "4px" }}
           >
             Escolha seu Kit Educakids360
           </h2>
@@ -25,11 +31,11 @@ export default function Oferta() {
           <Countdown />
 
           <div className="oferta-cards-grid">
-            {/* Plano Básico */}
+            {/* ── Plano Básico ── */}
             <div className="oferta-card">
               <span className="oferta-card-tag">Kit Básico</span>
               <div className="oferta-de" style={{ marginTop: "14px" }}>De R$ 197,00</div>
-              <div className="oferta-por">R$ 27,90</div>
+              <div className="oferta-por" style={{ fontSize: "clamp(36px,7vw,56px)" }}>R$ 27,90</div>
               <div className="oferta-parcel">ou 4× de R$ 7,97 sem juros</div>
               <div className="oferta-incluso" style={{ marginBottom: "20px" }}>
                 <span className="oferta-tag">✅ Kit Educakids360 Completo</span>
@@ -49,29 +55,68 @@ export default function Oferta() {
               </p>
             </div>
 
-            {/* Plano Completo */}
+            {/* ── Plano Completo ── */}
             <div className="oferta-card oferta-card--destaque">
               <span className="oferta-card-tag oferta-card-tag--destaque">⭐ Mais Completo</span>
-              <div className="oferta-de" style={{ marginTop: "14px" }}>De R$ 453,00 (valor total)</div>
-              <div className="oferta-por">R$ 37,90</div>
-              <div className="oferta-parcel">ou 5× de R$ 8,39 sem juros</div>
-              <div className="oferta-incluso" style={{ marginBottom: "20px" }}>
-                <span className="oferta-tag">✅ Kit Educakids360 Completo</span>
-                <span className="oferta-tag">🎁 6 Cadernos Bônus</span>
-                <span className="oferta-tag">📲 Acesso Imediato</span>
-                <span className="oferta-tag">♾️ Acesso Vitalício</span>
-                <span className="oferta-tag">🖨️ Imprima quando quiser</span>
+
+              {/* Lista de itens */}
+              <ul className="oferta-itens-lista">
+                {itensCompleto.map((item) => (
+                  <li className="oferta-item-row" key={item.nome}>
+                    <span className="oferta-item-nome">
+                      <span>✅</span>
+                      <span>{item.nome}</span>
+                    </span>
+                    <span className="oferta-item-preco">De {item.valor}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Extras sem preço */}
+              <ul className="oferta-extras">
+                <li>🎧 Suporte Profissional</li>
+                <li>🛡️ Garantia Incondicional</li>
+              </ul>
+
+              <div className="oferta-divider" />
+
+              <p className="oferta-total-label">
+                No total tudo deveria custar{" "}
+                <strong>R$ 465,00</strong>
+              </p>
+              <p className="oferta-total-call">
+                Mas hoje você vai ter acesso completo por
+              </p>
+
+              <div className="oferta-por" style={{ fontSize: "clamp(40px,7vw,60px)", marginBottom: "4px" }}>
+                R$ 37,90
               </div>
+              <div className="oferta-parcel">5x de R$ 8,39 *</div>
+
+              <p className="oferta-access-info">ACESSO VITALÍCIO | ACESSO IMEDIATO</p>
+
               <a
                 href="https://pay.cakto.com.br/9sw8c9t_794481"
                 className="btn-cta btn-cta--destaque"
-                style={{ width: "100%", fontSize: "clamp(13px,2.5vw,16px)", padding: "15px 20px" }}
+                style={{ width: "100%", fontSize: "clamp(13px,2vw,15px)", padding: "15px 16px" }}
               >
-                QUERO O KIT COMPLETO + BÔNUS!
+                QUERO GARANTIR O MEU KIT AGORA!
               </a>
-              <p className="cta-abaixo" style={{ color: "rgba(255,255,255,0.65)", marginTop: "10px", fontSize: "12px" }}>
-                🔒 Cartão, PIX ou boleto
-              </p>
+
+              <div className="oferta-seguranca">
+                <div className="oferta-seguranca-item">
+                  <span>🔒</span>
+                  <span>Compra Segura</span>
+                </div>
+                <div className="oferta-seguranca-item">
+                  <span>🛡️</span>
+                  <span>Garantia</span>
+                </div>
+                <div className="oferta-seguranca-item">
+                  <span>✅</span>
+                  <span>Satisfação Protegida</span>
+                </div>
+              </div>
             </div>
           </div>
 
