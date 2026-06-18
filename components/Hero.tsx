@@ -2,55 +2,52 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="hero">
-      <div className="container">
-        <span className="tag">✨ Educakids360 — Grafismo Fonético</span>
-
-        <div className="hero-img-wrap">
-          <Image
-            src="/images/mockup-principal.png"
-            alt="Kit Educakids360 — Método Grafismo Fonético"
-            width={1365}
-            height={738}
-            priority
-            style={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "16px",
-              boxShadow: "0 20px 60px rgba(0,0,0,0.35)",
-              display: "block",
-            }}
-          />
-        </div>
-
-        <h1 className="hero-titulo">
-          A técnica que ensina seu filho
-          <br />a ler <em>até 5× mais rápido</em>,<br />
-          sem pressão nem estresse!
-        </h1>
-        <p className="hero-sub">
-          Funciona com apenas{" "}
-          <strong style={{ color: "#FFD54F" }}>10 minutos por dia</strong> —
-          para crianças de 2 a 12 anos
-        </p>
-
-        <div className="hero-badges">
-          <span className="hero-badge-item">👧 2 a 12 anos</span>
-          <span className="hero-badge-item">⏰ 10 min/dia</span>
-          <span className="hero-badge-item">📲 Acesso imediato</span>
-          <span className="hero-badge-item">♾️ Acesso vitalício</span>
-        </div>
-
-        <a href="#oferta" className="btn-cta">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-            <path d="M12 2L2 7l10 5 10-5-10-5z" />
-            <path d="M2 17l10 5 10-5" />
-            <path d="M2 12l10 5 10-5" />
-          </svg>
-          Quero Meu Filho Lendo Rápido!
-        </a>
-        <p className="cta-abaixo">🔒 Compra 100% segura • Acesso imediato por e-mail</p>
+    <>
+      {/* Mockup principal — full-width, fundo branco, sem bordas */}
+      <div style={{ background: "#fff", lineHeight: 0, width: "100%" }}>
+        <Image
+          src="/images/mockup-principal.png"
+          alt="Kit Educakids360 — Método Grafismo Fonético"
+          width={1365}
+          height={738}
+          priority
+          style={{ width: "100%", height: "auto", display: "block" }}
+        />
       </div>
-    </section>
+
+      {/* Headline e CTA */}
+      <section className="hero">
+        <div className="container">
+          <span className="tag">✨ Educakids360 — Grafismo Fonético</span>
+          <h1 className="hero-titulo">
+            A técnica que ensina seu filho
+            <br />a ler <em>até 5× mais rápido</em>,<br />
+            sem pressão nem estresse!
+          </h1>
+          <p className="hero-sub">
+            Funciona com apenas{" "}
+            <strong style={{ color: "#FFD54F" }}>10 minutos por dia</strong> —
+            para crianças de 2 a 12 anos
+          </p>
+
+          <div className="hero-badges">
+            <span className="hero-badge-item">👧 2 a 12 anos</span>
+            <span className="hero-badge-item">⏰ 10 min/dia</span>
+            <span className="hero-badge-item">📲 Acesso imediato</span>
+            <span className="hero-badge-item">♾️ Acesso vitalício</span>
+          </div>
+
+          <a href="#oferta" className="btn-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+            Quero Meu Filho Lendo Rápido!
+          </a>
+          <p className="cta-abaixo">🔒 Compra 100% segura • Acesso imediato por e-mail</p>
+        </div>
+      </section>
+    </>
   );
 }
