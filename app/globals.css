@@ -23,7 +23,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: var(--font-nunito), sans-serif;
   color: var(--texto);
   background: var(--branco);
   overflow-x: hidden;
@@ -52,7 +52,7 @@ a { text-decoration: none; color: inherit; }
 .tag--verde { background: var(--verde); }
 .tag--laranja { background: var(--laranja); }
 .titulo {
-  font-family: 'Fredoka One', cursive;
+  font-family: var(--font-fredoka), cursive;
   font-size: clamp(26px, 5vw, 42px);
   line-height: 1.2;
   margin-bottom: 16px;
@@ -106,7 +106,7 @@ a { text-decoration: none; color: inherit; }
 }
 .hero .tag { background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); }
 .hero-titulo {
-  font-family: 'Fredoka One', cursive;
+  font-family: var(--font-fredoka), cursive;
   font-size: clamp(28px, 6vw, 52px);
   color: var(--branco);
   line-height: 1.15;
@@ -154,6 +154,23 @@ a { text-decoration: none; color: inherit; }
   max-width: 620px;
   width: 100%;
 }
+.hero-social-proof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 50px;
+  position: relative;
+  z-index: 1;
+}
+.hero-stars { font-size: 18px; letter-spacing: 2px; }
+.hero-social-texto { color: rgba(255,255,255,0.92); font-size: 14px; font-weight: 600; }
+.hero-social-texto strong { color: #FFE000; }
 
 /* ─── CTA BUTTON ─── */
 @keyframes pulsar {
@@ -183,7 +200,7 @@ a { text-decoration: none; color: inherit; }
   gap: 10px;
   background: linear-gradient(160deg, #FF6200 0%, #FF3D00 60%, #CC1A00 100%);
   color: var(--branco);
-  font-family: 'Nunito', sans-serif;
+  font-family: var(--font-nunito), sans-serif;
   font-size: clamp(16px, 2.5vw, 20px);
   font-weight: 900;
   padding: 18px 36px;
@@ -336,7 +353,7 @@ a { text-decoration: none; color: inherit; }
   border-top: 4px solid var(--azul-claro);
 }
 .beneficio-num {
-  font-family: 'Fredoka One', cursive;
+  font-family: var(--font-fredoka), cursive;
   font-size: 40px;
   color: var(--azul-claro);
   opacity: 0.4;
@@ -362,7 +379,7 @@ a { text-decoration: none; color: inherit; }
 }
 .depoimento-card::before {
   content: '"';
-  font-family: 'Fredoka One', cursive;
+  font-family: var(--font-fredoka), cursive;
   font-size: 80px;
   color: var(--azul-claro);
   opacity: 0.15;
@@ -444,7 +461,7 @@ a { text-decoration: none; color: inherit; }
   gap: 4px;
 }
 .bonus-num {
-  font-family: 'Fredoka One', cursive;
+  font-family: var(--font-fredoka), cursive;
   font-size: 11px;
   color: var(--laranja);
   background: rgba(255,109,0,0.08);
@@ -487,7 +504,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 4px;
 }
 .oferta-por {
-  font-family: 'Fredoka One', cursive;
+  font-family: var(--font-fredoka), cursive;
   font-size: clamp(48px, 10vw, 72px);
   color: #FFE800;
   text-shadow: 0 2px 14px rgba(255,220,0,0.45);
@@ -686,7 +703,7 @@ a { text-decoration: none; color: inherit; }
   border: none;
   padding: 20px 24px;
   text-align: left;
-  font-family: 'Nunito', sans-serif;
+  font-family: var(--font-nunito), sans-serif;
   font-size: 15px;
   font-weight: 800;
   color: var(--azul-escuro);
@@ -724,7 +741,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 13px;
 }
 .footer-logo {
-  font-family: 'Fredoka One', cursive;
+  font-family: var(--font-fredoka), cursive;
   font-size: 22px;
   color: var(--branco);
   margin-bottom: 12px;
@@ -794,7 +811,7 @@ a { text-decoration: none; color: inherit; }
   text-align: center;
 }
 .countdown-num {
-  font-family: 'Fredoka One', cursive;
+  font-family: var(--font-fredoka), cursive;
   font-size: 32px;
   color: #FFE000;
   display: block;
@@ -845,7 +862,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 14px;
 }
 .exit-titulo {
-  font-family: 'Fredoka One', cursive;
+  font-family: var(--font-fredoka), cursive;
   font-size: clamp(22px, 5vw, 30px);
   color: var(--texto);
   margin-bottom: 8px;
@@ -869,7 +886,7 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   gap: 4px;
   align-items: center;
-  font-family: 'Fredoka One', cursive;
+  font-family: var(--font-fredoka), cursive;
   font-size: 36px;
   color: var(--laranja);
 }
@@ -908,7 +925,7 @@ a { text-decoration: none; color: inherit; }
   text-decoration: line-through;
 }
 .exit-preco-por {
-  font-family: 'Fredoka One', cursive;
+  font-family: var(--font-fredoka), cursive;
   font-size: 52px;
   color: var(--verde);
   line-height: 1;
@@ -1016,6 +1033,7 @@ a { text-decoration: none; color: inherit; }
   .bonus-valor { width: 100%; }
   .hero { padding: 50px 0 40px; }
   .oferta-cards-grid { grid-template-columns: 1fr; gap: 16px; }
+  .oferta-card--destaque { order: -1; }
   .bonus-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
 
   /* Popup mobile: top-left corner, smaller size */

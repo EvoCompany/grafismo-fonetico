@@ -32,6 +32,15 @@ export default function Incluso() {
             </div>
           ))}
         </div>
+
+        <div style={{ textAlign: "center", marginTop: "40px" }}>
+          <a href="#oferta" className="btn-cta">
+            🚀 Quero o Kit Completo — R$&nbsp;37,90
+          </a>
+          <p className="cta-abaixo dark" style={{ marginTop: "12px" }}>
+            🔒 7 dias de garantia • Acesso imediato • Sem risco
+          </p>
+        </div>
       </div>
     </section>
   );

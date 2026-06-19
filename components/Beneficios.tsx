@@ -27,6 +27,15 @@ export default function Beneficios() {
             </div>
           ))}
         </div>
+
+        <div style={{ textAlign: "center", marginTop: "40px" }}>
+          <a href="#oferta" className="btn-cta">
+            ✅ Quero esses benefícios para meu filho!
+          </a>
+          <p className="cta-abaixo dark" style={{ marginTop: "12px" }}>
+            🔒 7 dias de garantia • Acesso imediato • Sem risco
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -44,6 +44,15 @@ export default function Problema() {
             </div>
           ))}
         </div>
+
+        <div style={{ textAlign: "center", marginTop: "40px" }}>
+          <a href="#oferta" className="btn-cta">
+            Quero resolver isso agora — R$&nbsp;27,90
+          </a>
+          <p className="cta-abaixo dark" style={{ marginTop: "12px" }}>
+            🔒 7 dias de garantia • Acesso imediato • Sem risco
+          </p>
+        </div>
       </div>
     </section>
   );

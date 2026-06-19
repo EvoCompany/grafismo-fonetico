@@ -1,6 +1,21 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { Nunito, Fredoka_One } from "next/font/google";
 import "./globals.css";
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800", "900"],
+  variable: "--font-nunito",
+  display: "swap",
+});
+
+const fredoka = Fredoka_One({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-fredoka",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Educakids360 — Ensine Seu Filho a Ler Até 5× Mais Rápido | Grafismo Fonético",
@@ -21,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={`${nunito.variable} ${fredoka.variable}`}>
       <head>
         {/* UTMify Pixel */}
         <script
@@ -40,16 +55,6 @@ export default function RootLayout({
         {/* Resource hints */}
         <link rel="dns-prefetch" href="//cdn.utmify.com.br" />
         <link rel="dns-prefetch" href="//pay.cakto.com.br" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body>
         {children}

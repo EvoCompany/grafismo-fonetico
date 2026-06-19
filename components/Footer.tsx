@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-logo">📚 Educakids360 · Grafismo Fonético</div>
       <p style={{ marginBottom: "8px" }}>
-        © 2025 Educakids360. Todos os direitos reservados.
+        © {new Date().getFullYear()} Educakids360. Todos os direitos reservados.
       </p>
       <p style={{ marginBottom: "16px" }}>
         <a href="#">Política de Privacidade</a> &nbsp;|&nbsp;

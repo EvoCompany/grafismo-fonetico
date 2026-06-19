@@ -41,9 +41,16 @@ export default function Hero() {
             <path d="M2 17l10 5 10-5" />
             <path d="M2 12l10 5 10-5" />
           </svg>
-          Quero Meu Filho Lendo Rápido!
+          Quero Meu Filho Lendo Rápido — R$&nbsp;27,90!
         </a>
         <p className="cta-abaixo">🔒 Compra 100% segura • Acesso imediato por e-mail</p>
+
+        <div className="hero-social-proof">
+          <span className="hero-stars">⭐⭐⭐⭐⭐</span>
+          <span className="hero-social-texto">
+            <strong>+2.400 famílias</strong> já transformaram a alfabetização dos seus filhos
+          </span>
+        </div>
       </div>
     </section>
   );
