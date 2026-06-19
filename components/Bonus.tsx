@@ -71,6 +71,8 @@ export default function Bonus() {
                   alt={b.titulo}
                   width={400}
                   height={400}
+                  sizes="(max-width: 480px) calc(100vw - 40px), (max-width: 768px) calc(50vw - 30px), 260px"
+                  loading="lazy"
                   style={{ width: "100%", height: "auto" }}
                 />
               </div>

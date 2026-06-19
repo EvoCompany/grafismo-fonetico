@@ -1,4 +1,5 @@
-import Countdown from "./Countdown";
+import dynamic from "next/dynamic";
+const Countdown = dynamic(() => import("./Countdown"), { ssr: false });
 
 const itensBasico = [
   { nome: "Atividades de Grafismo Fonético Nível 1", valor: "R$ 67,00" },

@@ -10,24 +10,28 @@ import Oferta from "@/components/Oferta";
 import Garantia from "@/components/Garantia";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
-import ExitPopup from "@/components/ExitPopup";
-// import WhatsappFloat from "@/components/WhatsappFloat";
-import PurchasePopup from "@/components/PurchasePopup";
+import dynamic from "next/dynamic";
+
+// Carrega em chunk separado após hidratação inicial — não bloqueia LCP/TBT
+const ExitPopup = dynamic(() => import("@/components/ExitPopup"), { ssr: false });
+const PurchasePopup = dynamic(() => import("@/components/PurchasePopup"), { ssr: false });
 
 export default function Home() {
   return (
     <>
       <UrgenciaBar />
-      <Hero />
-      <Problema />
-      <Solucao />
-      <Incluso />
-      <Beneficios />
-      <Depoimentos />
-      <Bonus />
-      <Oferta />
-      <Garantia />
-      <FAQ />
+      <main>
+        <Hero />
+        <Problema />
+        <Solucao />
+        <Incluso />
+        <Beneficios />
+        <Depoimentos />
+        <Bonus />
+        <Oferta />
+        <Garantia />
+        <FAQ />
+      </main>
       <Footer />
       {/* <WhatsappFloat /> */}
       <PurchasePopup />
