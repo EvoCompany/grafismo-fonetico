@@ -463,38 +463,40 @@ a { text-decoration: none; color: inherit; }
 
 /* ─── OFERTA ─── */
 .oferta-box {
-  background: linear-gradient(135deg, #0452CC 0%, #062EA8 100%);
+  background: linear-gradient(160deg, #021A90 0%, #010D5C 100%);
   border-radius: 24px;
   padding: 48px 40px;
   text-align: center;
   color: var(--branco);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 12px 60px rgba(0,20,140,0.55);
 }
 .oferta-box::before {
   content: '';
   position: absolute;
   top: -60px; right: -60px;
   width: 200px; height: 200px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(0,160,255,0.10);
   border-radius: 50%;
 }
 .oferta-de {
   font-size: 16px;
   text-decoration: line-through;
-  opacity: 0.6;
+  opacity: 0.7;
   margin-bottom: 4px;
 }
 .oferta-por {
   font-family: 'Fredoka One', cursive;
   font-size: clamp(48px, 10vw, 72px);
-  color: #FFE000;
+  color: #FFE800;
+  text-shadow: 0 2px 14px rgba(255,220,0,0.45);
   line-height: 1;
   margin-bottom: 4px;
 }
 .oferta-parcel {
   font-size: 15px;
-  opacity: 0.8;
+  opacity: 0.9;
   margin-bottom: 32px;
 }
 .oferta-incluso {
@@ -505,8 +507,8 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 32px;
 }
 .oferta-tag {
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(0,160,255,0.25);
+  border: 1px solid rgba(0,200,255,0.55);
   font-size: 13px;
   font-weight: 700;
   padding: 6px 14px;
@@ -517,7 +519,8 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(0,160,255,0.18);
+  border: 1px solid rgba(0,200,255,0.30);
   border-radius: var(--radius-sm);
   padding: 14px 20px;
   margin-top: 24px;
@@ -534,8 +537,8 @@ a { text-decoration: none; color: inherit; }
   align-items: start;
 }
 .oferta-card {
-  background: rgba(255,255,255,0.10);
-  border: 2px solid rgba(255,255,255,0.28);
+  background: rgba(0,60,200,0.35);
+  border: 2px solid rgba(0,160,255,0.50);
   border-radius: 20px;
   padding: 24px 16px;
   text-align: center;
@@ -544,14 +547,14 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
 }
 .oferta-card--destaque {
-  background: rgba(255,255,255,0.17);
-  border: 3px solid #FFE000;
-  box-shadow: 0 0 30px rgba(255,213,79,0.28);
+  background: rgba(0,40,160,0.50);
+  border: 3px solid #FFE800;
+  box-shadow: 0 0 40px rgba(255,220,0,0.40);
 }
 .oferta-card-tag {
   display: inline-block;
-  background: rgba(255,255,255,0.18);
-  border: 1px solid rgba(255,255,255,0.40);
+  background: rgba(0,160,255,0.30);
+  border: 1px solid rgba(0,200,255,0.60);
   color: white;
   font-size: 11px;
   font-weight: 800;
@@ -561,8 +564,8 @@ a { text-decoration: none; color: inherit; }
   border-radius: 50px;
 }
 .oferta-card-tag--destaque {
-  background: #FFE000;
-  border-color: #FFE000;
+  background: #FFE800;
+  border-color: #FFE800;
   color: #07186A;
 }
 
@@ -582,7 +585,7 @@ a { text-decoration: none; color: inherit; }
   align-items: flex-start;
   gap: 8px;
   font-size: 13px;
-  color: rgba(255,255,255,0.92);
+  color: rgba(255,255,255,1);
   line-height: 1.4;
 }
 .oferta-item-nome {
@@ -608,32 +611,32 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 4px;
   text-align: left;
   font-size: 13.5px;
-  color: rgba(255,255,255,0.88);
+  color: rgba(255,255,255,1);
 }
 .oferta-divider {
   width: 100%;
   height: 1px;
-  background: rgba(255,255,255,0.22);
+  background: rgba(0,200,255,0.40);
   margin: 12px 0 10px;
 }
 .oferta-total-label {
   font-size: 14px;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.85);
   margin-bottom: 2px;
 }
 .oferta-total-label strong {
   text-decoration: line-through;
-  text-decoration-color: rgba(255,255,255,0.5);
-  color: rgba(255,255,255,0.70);
+  text-decoration-color: rgba(255,100,100,0.8);
+  color: #FF6060;
 }
 .oferta-total-call {
   font-size: 14.5px;
-  color: rgba(255,255,255,0.80);
+  color: rgba(255,255,255,0.95);
   margin-bottom: 4px;
 }
 .oferta-access-info {
   font-size: 11.5px;
-  color: rgba(255,255,255,0.70);
+  color: #00E0FF;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   margin: 8px 0 14px;
@@ -650,7 +653,7 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   gap: 3px;
   font-size: 11.5px;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.90);
   text-align: center;
 }
 .oferta-seguranca-item span:first-child { font-size: 22px; }
