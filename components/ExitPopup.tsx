@@ -1,13 +1,12 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
-const TRAP = { exitTrap: true };
-
 export default function ExitPopup() {
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const [seconds, setSeconds] = useState(599);
   const shown = useRef(false);
+  const hashJustChanged = useRef(false);
 
   const show = () => {
     if (shown.current || dismissed) return;
@@ -16,37 +15,49 @@ export default function ExitPopup() {
   };
 
   useEffect(() => {
-    // Desktop: mouse sai pelo topo da janela (exit intent)
+    const baseUrl = window.location.href.split("#")[0];
+
+    // Rastreia cliques em links #hash para ignorar o popstate falso que
+    // Safari/iOS dispara durante navegação interna por âncora.
+    const onHashChange = () => {
+      hashJustChanged.current = true;
+      setTimeout(() => { hashJustChanged.current = false; }, 500);
+    };
+    window.addEventListener("hashchange", onHashChange);
+
+    // Back-button trap: empurra uma entrada com a MESMA URL (baseUrl).
+    // Quando o usuário tenta voltar, o browser navega para essa entrada
+    // duplicada — mesma URL, página não sai — popstate dispara e mostramos
+    // o popup. Continuamos empurrando a entrada para manter o usuário na página
+    // enquanto o popup está aberto. Após exibido, paramos de reempurrar.
+    history.pushState(null, "", baseUrl);
+
+    const onPopState = () => {
+      if (hashJustChanged.current) return;
+      if (!shown.current) {
+        show();
+        history.pushState(null, "", baseUrl);
+      }
+    };
+    window.addEventListener("popstate", onPopState);
+
+    // Desktop: mouse sai pelo topo da janela em direção à aba ou botão voltar
     const onMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 5) show();
     };
     document.addEventListener("mouseleave", onMouseLeave);
 
-    // Back-button trap: push estado com marcador próprio.
-    // O popstate só dispara o popup quando e.state.exitTrap === true,
-    // ou seja, quando o usuário navega DE VOLTA para o nosso estado falso.
-    // Cliques em links #hash empurram um novo estado (state=null) para frente
-    // na história — o popstate resultante teria e.state=null e é ignorado.
-    const baseUrl = window.location.href.split("#")[0];
-    history.pushState(TRAP, "", baseUrl);
-
-    const onPopState = (e: PopStateEvent) => {
-      if (e.state?.exitTrap) {
-        show();
-        history.pushState(TRAP, "", baseUrl);
-      }
-    };
-    window.addEventListener("popstate", onPopState);
-
-    // Mobile: troca de app / minimiza navegador
+    // Mobile: troca de app / minimiza navegador (não interfere com back-button
+    // porque o trap mantém a URL igual e a página não fica oculta)
     const onVisibility = () => {
       if (document.visibilityState === "hidden") show();
     };
     document.addEventListener("visibilitychange", onVisibility);
 
     return () => {
-      document.removeEventListener("mouseleave", onMouseLeave);
+      window.removeEventListener("hashchange", onHashChange);
       window.removeEventListener("popstate", onPopState);
+      document.removeEventListener("mouseleave", onMouseLeave);
       document.removeEventListener("visibilitychange", onVisibility);
     };
   }, [dismissed]);
