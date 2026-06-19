@@ -117,7 +117,7 @@ export default function ExitPopup() {
 
         {/* TODO: trocar pelo link Cakto com preço de R$19,90 */}
         <a
-          href="https://pay.cakto.com.br/9sw8c9t_794481"
+          href="https://pay.cakto.com.br/ssyixoq"
           className="btn-cta exit-btn"
         >
           🔥 SIM! QUERO GARANTIR POR R$19,90 AGORA
