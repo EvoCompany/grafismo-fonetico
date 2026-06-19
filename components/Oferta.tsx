@@ -1,5 +1,11 @@
 import Countdown from "./Countdown";
 
+const itensBasico = [
+  { nome: "Atividades de Grafismo Fonético Nível 1", valor: "R$ 67,00" },
+  { nome: "Atividades de Grafismo Fonético Nível 2", valor: "R$ 67,00" },
+  { nome: "Atividades de Grafismo Fonético Nível 3", valor: "R$ 63,00" },
+];
+
 const itensCompleto = [
   { prefix: "",         nome: "Atividades de Grafismo Fonético Nível 1, 2 e 3", valor: "R$ 197,00" },
   { prefix: "Bônus 01:", nome: "Caderno do Alfabeto com Imagens",               valor: "R$ 37,00"  },
@@ -34,15 +40,38 @@ export default function Oferta() {
             {/* ── Plano Básico ── */}
             <div className="oferta-card">
               <span className="oferta-card-tag">Kit Básico</span>
-              <div className="oferta-de" style={{ marginTop: "14px" }}>De R$ 197,00</div>
-              <div className="oferta-por" style={{ fontSize: "clamp(36px,7vw,56px)" }}>R$ 27,90</div>
-              <div className="oferta-parcel">ou 4× de R$ 7,97 sem juros</div>
-              <div className="oferta-incluso" style={{ marginBottom: "20px" }}>
-                <span className="oferta-tag">✅ Kit Educakids360 Completo</span>
-                <span className="oferta-tag">📲 Acesso Imediato</span>
-                <span className="oferta-tag">♾️ Acesso Vitalício</span>
-                <span className="oferta-tag">🖨️ Imprima quando quiser</span>
+
+              <ul className="oferta-itens-lista">
+                {itensBasico.map((item) => (
+                  <li className="oferta-item-row" key={item.nome}>
+                    <span className="oferta-item-nome">
+                      <span>✅</span>
+                      <span>{item.nome}</span>
+                    </span>
+                    <span className="oferta-item-preco">De {item.valor}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <ul className="oferta-extras">
+                <li>🎧 Suporte Profissional</li>
+                <li>🛡️ Garantia Incondicional</li>
+              </ul>
+
+              <div className="oferta-divider" />
+
+              <p className="oferta-total-label">
+                No total tudo deveria custar <strong>R$ 197,00</strong>
+              </p>
+              <p className="oferta-total-call">Mas hoje você vai ter acesso por</p>
+
+              <div className="oferta-por" style={{ fontSize: "clamp(36px,7vw,56px)", marginBottom: "4px" }}>
+                R$ 27,90
               </div>
+              <div className="oferta-parcel">ou 4× de R$ 7,97 sem juros</div>
+
+              <p className="oferta-access-info">ACESSO VITALÍCIO | ACESSO IMEDIATO</p>
+
               <a
                 href="https://pay.cakto.com.br/5vkagcf"
                 className="btn-cta btn-cta--static"
@@ -50,9 +79,12 @@ export default function Oferta() {
               >
                 QUERO O KIT BÁSICO
               </a>
-              <p className="cta-abaixo" style={{ color: "rgba(255,255,255,0.65)", marginTop: "10px", fontSize: "12px" }}>
-                🔒 Pagamento 100% seguro
-              </p>
+
+              <div className="oferta-seguranca">
+                <div className="oferta-seguranca-item"><span>🔒</span><span>Compra Segura</span></div>
+                <div className="oferta-seguranca-item"><span>🛡️</span><span>Garantia</span></div>
+                <div className="oferta-seguranca-item"><span>✅</span><span>Satisfação Protegida</span></div>
+              </div>
             </div>
 
             {/* ── Plano Completo ── */}
