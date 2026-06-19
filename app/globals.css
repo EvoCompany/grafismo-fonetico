@@ -852,6 +852,26 @@ a { text-decoration: none; color: inherit; }
   .hero { padding: 50px 0 40px; }
   .oferta-cards-grid { grid-template-columns: 1fr; gap: 16px; }
   .bonus-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+  /* Popup mobile: move to bottom-left, smaller size */
+  .purchase-popup {
+    top: auto;
+    bottom: 20px;
+    left: 16px;
+    max-width: 220px;
+    width: calc(100vw - 90px);
+    padding: 9px 11px;
+    gap: 7px;
+  }
+  .purchase-popup-avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .purchase-popup-nome { font-size: 11.5px; }
+  .purchase-popup-produto { font-size: 10.5px; }
+  .purchase-popup-info { font-size: 10px; }
 }
 @media (max-width: 390px) {
   .hero-titulo { font-size: 26px; }
