@@ -6,12 +6,18 @@ export default function ExitPopup() {
   const [dismissed, setDismissed] = useState(false);
   const [seconds, setSeconds] = useState(599);
   const shown = useRef(false);
+  const ready = useRef(false);
 
   const show = () => {
-    if (shown.current || dismissed) return;
+    if (!ready.current || shown.current || dismissed) return;
     shown.current = true;
     setVisible(true);
   };
+
+  useEffect(() => {
+    const warmup = setTimeout(() => { ready.current = true; }, 20000);
+    return () => clearTimeout(warmup);
+  }, []);
 
   useEffect(() => {
     // Desktop: mouse sai pelo topo (exit intent)
