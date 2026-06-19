@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { Nunito, Fredoka_One } from "next/font/google";
+import { Nunito, Fredoka } from "next/font/google";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -10,7 +10,7 @@ const nunito = Nunito({
   display: "swap",
 });
 
-const fredoka = Fredoka_One({
+const fredoka = Fredoka({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-fredoka",
