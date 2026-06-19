@@ -855,7 +855,6 @@ a { text-decoration: none; color: inherit; }
 
   /* Popup mobile: top-left corner, smaller size */
   .purchase-popup {
-    top: 16px;
     bottom: auto;
     left: 16px;
     max-width: 220px;

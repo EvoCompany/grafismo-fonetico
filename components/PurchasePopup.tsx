@@ -22,7 +22,28 @@ const COMPRAS = [
 export default function PurchasePopup() {
   const [visible, setVisible] = useState(false);
   const [idx, setIdx] = useState(0);
+  const [topOffset, setTopOffset] = useState(16);
   const hasStarted = useRef(false);
+
+  // Track urgency bar visibility to offset popup below it
+  useEffect(() => {
+    const bar = document.querySelector(".urgencia-bar") as HTMLElement | null;
+    if (!bar) return;
+
+    const update = () => {
+      const rect = bar.getBoundingClientRect();
+      const barVisible = rect.bottom > 0;
+      setTopOffset(barVisible ? rect.bottom + 12 : 16);
+    };
+
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
 
   useEffect(() => {
     const t = setTimeout(() => {
@@ -49,7 +70,10 @@ export default function PurchasePopup() {
   const c = COMPRAS[idx];
 
   return (
-    <div className={`purchase-popup${visible ? " purchase-popup--visible" : ""}`}>
+    <div
+      className={`purchase-popup${visible ? " purchase-popup--visible" : ""}`}
+      style={{ top: `${topOffset}px` }}
+    >
       <div className="purchase-popup-avatar">🛒</div>
       <div className="purchase-popup-body">
         <p className="purchase-popup-nome">{c.nome} comprou:</p>
