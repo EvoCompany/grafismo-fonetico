@@ -1,13 +1,13 @@
 import Countdown from "./Countdown";
 
 const itensCompleto = [
-  { nome: "Atividades de Grafismo Fonético Nível 1, 2 e 3", valor: "R$ 197,00" },
-  { nome: "Bônus 01: Caderno do Alfabeto com Imagens", valor: "R$ 37,00" },
-  { nome: "Bônus 02: Caderno Quebra-Cabeça do Alfabeto", valor: "R$ 47,00" },
-  { nome: "Bônus 03: Caderno de Formação de Palavras", valor: "R$ 57,00" },
-  { nome: "Bônus 04: Caderno Relógio do Alfabeto", valor: "R$ 39,00" },
-  { nome: "Bônus 05: Caderno de Pontilhado do Alfabeto", valor: "R$ 27,00" },
-  { nome: "Bônus 06: Caderno Carinhas do Alfabeto", valor: "R$ 49,00" },
+  { prefix: "",         nome: "Atividades de Grafismo Fonético Nível 1, 2 e 3", valor: "R$ 197,00" },
+  { prefix: "Bônus 01:", nome: "Caderno do Alfabeto com Imagens",               valor: "R$ 37,00"  },
+  { prefix: "Bônus 02:", nome: "Caderno Quebra-Cabeça do Alfabeto",             valor: "R$ 47,00"  },
+  { prefix: "Bônus 03:", nome: "Caderno de Formação de Palavras",               valor: "R$ 57,00"  },
+  { prefix: "Bônus 04:", nome: "Caderno Relógio do Alfabeto",                   valor: "R$ 39,00"  },
+  { prefix: "Bônus 05:", nome: "Caderno de Pontilhado do Alfabeto",             valor: "R$ 27,00"  },
+  { prefix: "Bônus 06:", nome: "Caderno Carinhas do Alfabeto",                  valor: "R$ 49,00"  },
 ];
 
 export default function Oferta() {
@@ -45,7 +45,7 @@ export default function Oferta() {
               </div>
               <a
                 href="https://pay.cakto.com.br/5vkagcf"
-                className="btn-cta"
+                className="btn-cta btn-cta--static"
                 style={{ width: "100%", fontSize: "clamp(13px,2.5vw,16px)", padding: "15px 20px" }}
               >
                 QUERO O KIT BÁSICO
@@ -59,20 +59,21 @@ export default function Oferta() {
             <div className="oferta-card oferta-card--destaque">
               <span className="oferta-card-tag oferta-card-tag--destaque">⭐ Mais Completo</span>
 
-              {/* Lista de itens */}
               <ul className="oferta-itens-lista">
                 {itensCompleto.map((item) => (
                   <li className="oferta-item-row" key={item.nome}>
                     <span className="oferta-item-nome">
                       <span>✅</span>
-                      <span>{item.nome}</span>
+                      <span>
+                        {item.prefix && <strong>{item.prefix} </strong>}
+                        {item.nome}
+                      </span>
                     </span>
                     <span className="oferta-item-preco">De {item.valor}</span>
                   </li>
                 ))}
               </ul>
 
-              {/* Extras sem preço */}
               <ul className="oferta-extras">
                 <li>🎧 Suporte Profissional</li>
                 <li>🛡️ Garantia Incondicional</li>
@@ -81,12 +82,9 @@ export default function Oferta() {
               <div className="oferta-divider" />
 
               <p className="oferta-total-label">
-                No total tudo deveria custar{" "}
-                <strong>R$ 465,00</strong>
+                No total tudo deveria custar <strong>R$ 465,00</strong>
               </p>
-              <p className="oferta-total-call">
-                Mas hoje você vai ter acesso completo por
-              </p>
+              <p className="oferta-total-call">Mas hoje você vai ter acesso completo por</p>
 
               <div className="oferta-por" style={{ fontSize: "clamp(40px,7vw,60px)", marginBottom: "4px" }}>
                 R$ 37,90
@@ -104,18 +102,9 @@ export default function Oferta() {
               </a>
 
               <div className="oferta-seguranca">
-                <div className="oferta-seguranca-item">
-                  <span>🔒</span>
-                  <span>Compra Segura</span>
-                </div>
-                <div className="oferta-seguranca-item">
-                  <span>🛡️</span>
-                  <span>Garantia</span>
-                </div>
-                <div className="oferta-seguranca-item">
-                  <span>✅</span>
-                  <span>Satisfação Protegida</span>
-                </div>
+                <div className="oferta-seguranca-item"><span>🔒</span><span>Compra Segura</span></div>
+                <div className="oferta-seguranca-item"><span>🛡️</span><span>Garantia</span></div>
+                <div className="oferta-seguranca-item"><span>✅</span><span>Satisfação Protegida</span></div>
               </div>
             </div>
           </div>

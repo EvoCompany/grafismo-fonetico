@@ -12,6 +12,7 @@ import Garantia from "@/components/Garantia";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import WhatsappFloat from "@/components/WhatsappFloat";
+import PurchasePopup from "@/components/PurchasePopup";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       <FAQ />
       <Footer />
       <WhatsappFloat />
+      <PurchasePopup />
     </>
   );
 }

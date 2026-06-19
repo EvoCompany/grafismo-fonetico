@@ -1,6 +1,6 @@
 export default function WaveDivider() {
   return (
-    <div className="wave-divider" style={{ background: "#1565C0" }}>
+    <div className="wave-divider" style={{ background: "#2B8AE1" }}>
       <svg
         viewBox="0 0 1440 60"
         xmlns="http://www.w3.org/2000/svg"

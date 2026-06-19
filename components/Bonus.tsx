@@ -5,42 +5,36 @@ const bonusList = [
     num: "Bônus 1",
     titulo: "Caderno do Alfabeto com Imagens",
     desc: "Associação visual de letras com imagens para fixação rápida",
-    valor: "R$ 37,00",
     img: "/images/bonus-1.png",
   },
   {
     num: "Bônus 2",
     titulo: "Caderno Quebra-Cabeça do Alfabeto",
     desc: "Atividades lúdicas de encaixe que tornam o aprendizado uma brincadeira",
-    valor: "R$ 47,00",
     img: "/images/bonus-2.png",
   },
   {
     num: "Bônus 3",
     titulo: "Caderno de Formação de Palavras",
     desc: "Do fonema à palavra — exercícios progressivos de construção vocabular",
-    valor: "R$ 57,00",
     img: "/images/bonus-3.png",
   },
   {
     num: "Bônus 4",
     titulo: "Caderno Relógio do Alfabeto",
     desc: "Aprende letras e noção de tempo simultaneamente — dois em um!",
-    valor: "R$ 39,00",
     img: "/images/bonus-4.png",
   },
   {
     num: "Bônus 5",
     titulo: "Caderno de Pontilhado do Alfabeto",
     desc: "Treino de traçado com pontilhado para desenvolver a escrita correta",
-    valor: "R$ 27,00",
     img: "/images/bonus-5.png",
   },
   {
     num: "Bônus 6",
     titulo: "Caderno Carinhas do Alfabeto",
     desc: "Expressões faciais associadas a letras — aprendizado emocional e divertido",
-    valor: "R$ 49,00",
     img: "/images/bonus-6.png",
   },
 ];
@@ -81,7 +75,6 @@ export default function Bonus() {
                   <p>{b.desc}</p>
                 </div>
                 <div className="bonus-valor">
-                  Valor: {b.valor}
                   <strong>GRÁTIS</strong>
                 </div>
               </div>
