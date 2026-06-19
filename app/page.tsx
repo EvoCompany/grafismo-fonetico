@@ -1,6 +1,5 @@
 import UrgenciaBar from "@/components/UrgenciaBar";
 import Hero from "@/components/Hero";
-import WaveDivider from "@/components/WaveDivider";
 import Problema from "@/components/Problema";
 import Solucao from "@/components/Solucao";
 import Incluso from "@/components/Incluso";
@@ -19,7 +18,6 @@ export default function Home() {
     <>
       <UrgenciaBar />
       <Hero />
-      <WaveDivider />
       <Problema />
       <Solucao />
       <Incluso />
