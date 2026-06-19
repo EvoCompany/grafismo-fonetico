@@ -1,36 +1,40 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
+const TRAP = { exitTrap: true };
+
 export default function ExitPopup() {
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const [seconds, setSeconds] = useState(599);
   const shown = useRef(false);
-  const ready = useRef(false);
 
   const show = () => {
-    if (!ready.current || shown.current || dismissed) return;
+    if (shown.current || dismissed) return;
     shown.current = true;
     setVisible(true);
   };
 
   useEffect(() => {
-    const warmup = setTimeout(() => { ready.current = true; }, 20000);
-    return () => clearTimeout(warmup);
-  }, []);
-
-  useEffect(() => {
-    // Desktop: mouse sai pelo topo (exit intent)
+    // Desktop: mouse sai pelo topo da janela (exit intent)
     const onMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 5) show();
     };
     document.addEventListener("mouseleave", onMouseLeave);
 
-    // Mobile + desktop: captura botão voltar via history
-    history.pushState(null, "", window.location.href);
-    const onPopState = () => {
-      show();
-      history.pushState(null, "", window.location.href);
+    // Back-button trap: push estado com marcador próprio.
+    // O popstate só dispara o popup quando e.state.exitTrap === true,
+    // ou seja, quando o usuário navega DE VOLTA para o nosso estado falso.
+    // Cliques em links #hash empurram um novo estado (state=null) para frente
+    // na história — o popstate resultante teria e.state=null e é ignorado.
+    const baseUrl = window.location.href.split("#")[0];
+    history.pushState(TRAP, "", baseUrl);
+
+    const onPopState = (e: PopStateEvent) => {
+      if (e.state?.exitTrap) {
+        show();
+        history.pushState(TRAP, "", baseUrl);
+      }
     };
     window.addEventListener("popstate", onPopState);
 
