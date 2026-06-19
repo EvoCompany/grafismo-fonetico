@@ -1,7 +1,6 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { Nunito, Fredoka } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -17,12 +16,6 @@ const fredoka = Fredoka({
   variable: "--font-fredoka",
   display: "swap",
 });
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
-};
 
 export const metadata: Metadata = {
   title: "Educakids360 — Ensine Seu Filho a Ler Até 5× Mais Rápido | Grafismo Fonético",
@@ -45,27 +38,27 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${nunito.variable} ${fredoka.variable}`}>
       <head>
-        <link rel="preconnect" href="https://cdn.utmify.com.br" crossOrigin="anonymous" />
+        {/* UTMify Pixel */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.pixelId="69b3d7ab3863311bf2f5b9f4";var a=document.createElement("script");a.setAttribute("async","");a.setAttribute("defer","");a.setAttribute("src","https://cdn.utmify.com.br/scripts/pixel/pixel.js");document.head.appendChild(a);`,
+          }}
+        />
+        {/* UTMify UTMs */}
+        <script
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          data-utmify-prevent-xcod-sck=""
+          data-utmify-prevent-subids=""
+          async
+          defer
+        />
+        {/* Resource hints */}
         <link rel="dns-prefetch" href="//cdn.utmify.com.br" />
         <link rel="dns-prefetch" href="//pay.cakto.com.br" />
       </head>
       <body>
         {children}
         <Analytics />
-        {/* UTMify — afterInteractive: não bloqueia LCP nem TBT */}
-        <Script
-          id="utmify-pixel"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `window.pixelId="69b3d7ab3863311bf2f5b9f4";var a=document.createElement("script");a.setAttribute("async","");a.setAttribute("defer","");a.setAttribute("src","https://cdn.utmify.com.br/scripts/pixel/pixel.js");document.head.appendChild(a);`,
-          }}
-        />
-        <Script
-          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-          data-utmify-prevent-xcod-sck=""
-          data-utmify-prevent-subids=""
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );

@@ -42,8 +42,6 @@ export default function Solucao() {
               alt="Criança executando o método Grafismo Fonético"
               width={600}
               height={600}
-              sizes="(max-width: 768px) 100vw, 430px"
-              loading="lazy"
               style={{ width: "100%", height: "auto", borderRadius: "16px", boxShadow: "0 8px 40px rgba(0,0,0,0.18)" }}
             />
           </div>
