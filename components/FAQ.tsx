@@ -13,7 +13,7 @@ const perguntas = [
   },
   {
     q: "Como vou receber o material após a compra?",
-    a: "O acesso é 100% digital e enviado imediatamente para o seu e-mail após a confirmação do pagamento. Você recebe os arquivos em PDF prontos para baixar e imprimir quantas vezes quiser — o acesso é vitalício.",
+    a: "O acesso é 100% digital e enviado imediatamente para o seu e-mail após a confirmação do pagamento. Você recebe os arquivos em PDF prontos para baixar e imprimir quantas vezes quiser. O acesso é vitalício.",
   },
   {
     q: "Preciso de muito tempo para aplicar o método?",
@@ -25,7 +25,7 @@ const perguntas = [
   },
   {
     q: "Posso imprimir o material mais de uma vez?",
-    a: "Sim! Como o acesso é vitalício e os arquivos ficam com você, pode imprimir quantas vezes quiser — para vários filhos, em diferentes tamanhos, ou para refazer atividades que a criança gostou.",
+    a: "Sim! Como o acesso é vitalício e os arquivos ficam com você, pode imprimir quantas vezes quiser: para vários filhos, em diferentes tamanhos, ou para refazer atividades que a criança gostou.",
   },
 ];
 

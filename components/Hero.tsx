@@ -16,7 +16,7 @@ export default function Hero() {
           />
         </div>
 
-        <span className="tag">✨ Educakids360 — Grafismo Fonético</span>
+        <span className="tag">✨ Educakids360 · Grafismo Fonético</span>
         <h1 className="hero-titulo">
           A técnica que ensina seu filho
           <br />a ler <em>até 5× mais rápido</em>,<br />
@@ -24,7 +24,7 @@ export default function Hero() {
         </h1>
         <p className="hero-sub">
           Funciona com apenas{" "}
-          <strong style={{ color: "#FFD54F" }}>10 minutos por dia</strong> —
+          <strong style={{ color: "#FFD54F" }}>10 minutos por dia</strong>,
           para crianças de 2 a 12 anos
         </p>
 

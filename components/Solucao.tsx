@@ -3,7 +3,7 @@ import Image from "next/image";
 const itens = [
   {
     titulo: "Ativa múltiplas áreas do cérebro ao mesmo tempo",
-    desc: "A criança vê, escreve e pronuncia — memorização natural",
+    desc: "A criança vê, escreve e pronuncia, memorização natural",
   },
   {
     titulo: "Sem pressão ou memorização forçada",

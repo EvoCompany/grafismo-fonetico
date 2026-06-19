@@ -31,7 +31,7 @@ export default function Oferta() {
             Escolha seu Kit Educakids360
           </h2>
           <p style={{ color: "rgba(255,255,255,0.78)", fontSize: "15px", marginBottom: "8px" }}>
-            Método Grafismo Fonético — Aprenda a ler de forma natural e eficaz
+            Método Grafismo Fonético. Aprenda a ler de forma natural e eficaz
           </p>
 
           <Countdown />

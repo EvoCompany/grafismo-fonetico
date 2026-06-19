@@ -18,14 +18,14 @@ const bonusList = [
   {
     num: "Bônus 3",
     titulo: "Caderno de Formação de Palavras",
-    desc: "Do fonema à palavra — exercícios progressivos de construção vocabular",
+    desc: "Do fonema à palavra: exercícios progressivos de construção vocabular",
     img: "/images/bonus-3.png",
     valor: "R$ 57,00",
   },
   {
     num: "Bônus 4",
     titulo: "Caderno Relógio do Alfabeto",
-    desc: "Aprende letras e noção de tempo simultaneamente — dois em um!",
+    desc: "Aprende letras e noção de tempo simultaneamente. Dois em um!",
     img: "/images/bonus-4.png",
     valor: "R$ 39,00",
   },
@@ -39,7 +39,7 @@ const bonusList = [
   {
     num: "Bônus 6",
     titulo: "Caderno Carinhas do Alfabeto",
-    desc: "Expressões faciais associadas a letras — aprendizado emocional e divertido",
+    desc: "Expressões faciais associadas a letras, aprendizado emocional e divertido",
     img: "/images/bonus-6.png",
     valor: "R$ 49,00",
   },

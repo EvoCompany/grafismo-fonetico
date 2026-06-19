@@ -3,7 +3,7 @@ const beneficios = [
   { num: "02", titulo: "Criatividade e atenção", desc: "Atividades visuais e coloridas estimulam o foco de crianças com dificuldade de concentração." },
   { num: "03", titulo: "Conexões neurais para leitura", desc: "Combinar grafismo e fonética cria novas vias neurais que aceleram a decodificação de palavras." },
   { num: "04", titulo: "Amor pelas palavras", desc: "A criança desperta curiosidade pelos sons e significados, virando uma leitora natural." },
-  { num: "05", titulo: "Sem pressão nem choro", desc: "O método lúdico elimina o estresse da alfabetização tradicional — é divertido para a criança." },
+  { num: "05", titulo: "Sem pressão nem choro", desc: "O método lúdico elimina o estresse da alfabetização tradicional. É divertido para a criança." },
   { num: "06", titulo: "Funciona com TDAH e autismo", desc: "O estímulo multissensorial é especialmente eficaz para crianças com necessidades especiais." },
 ];
 
