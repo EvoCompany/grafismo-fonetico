@@ -27,6 +27,22 @@ const perguntas = [
     q: "Posso imprimir o material mais de uma vez?",
     a: "Sim! Como o acesso é vitalício e os arquivos ficam com você, pode imprimir quantas vezes quiser: para vários filhos, em diferentes tamanhos, ou para refazer atividades que a criança gostou.",
   },
+  {
+    q: "E se meu filho for muito pequeno, de 2 ou 3 anos?",
+    a: "O kit é totalmente indicado para essa faixa etária! As atividades do Nível 1 foram especialmente pensadas para crianças pequenas, com traçados simples, imagens coloridas e exercícios curtos de até 5 minutos. Quanto mais cedo a criança começa o contato com letras e sons de forma lúdica, mais natural e rápida é a alfabetização quando chegar o momento.",
+  },
+  {
+    q: "Preciso ter impressora em casa?",
+    a: "Não necessariamente. Você pode imprimir em qualquer gráfica, papelaria ou lan house perto de você por um custo muito baixo. Os arquivos são em PDF de alta resolução, prontos para impressão em qualquer lugar. Muitas mães imprimem apenas as atividades da semana para não desperdiçar papel.",
+  },
+  {
+    q: "O método substitui acompanhamento fonoaudiológico?",
+    a: "Não e nunca afirmamos isso. O Grafismo Fonético é um material de apoio pedagógico para estimular a alfabetização de forma natural e lúdica em casa. Crianças com diagnóstico de dislexia, atraso de fala ou outras condições específicas devem continuar com acompanhamento profissional. O kit pode inclusive ser usado como complemento às orientações do fonoaudiólogo.",
+  },
+  {
+    q: "Meu filho já está na escola. Ainda assim o kit funciona?",
+    a: "Com certeza! A maioria das nossas clientes tem filhos que já frequentam a escola mas ainda apresentam dificuldades com leitura, escrita ou concentração. O kit funciona como reforço em casa, acelerando o que é visto em sala de aula. Muitas mães relatam que a professora notou a melhora em poucas semanas.",
+  },
 ];
 
 export default function FAQ() {
