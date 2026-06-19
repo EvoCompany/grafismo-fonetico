@@ -63,7 +63,7 @@ export default function Solucao() {
             <ul className="solucao-lista">
               {itens.map((item) => (
                 <li key={item.titulo}>
-                  <span className="check-icon">✓</span>
+                  <span className="check-icon">★</span>
                   <div>
                     <p>{item.titulo}</p>
                     <span>{item.desc}</span>
