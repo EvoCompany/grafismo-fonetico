@@ -57,7 +57,7 @@ export default function Solucao() {
                 <li key={item.titulo}>
                   <span className="check-icon">✅</span>
                   <div>
-                    <p>{item.titulo}</p>
+                    <p><strong>{item.titulo}</strong></p>
                     <span>{item.desc}</span>
                   </div>
                 </li>

@@ -280,7 +280,7 @@ a { text-decoration: none; color: inherit; }
   margin-top: 16px;
 }
 .solucao-img img { border-radius: var(--radius); box-shadow: var(--sombra-forte); }
-.solucao-lista { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.solucao-lista { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .solucao-lista li {
   display: flex;
   gap: 12px;
