@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const itens = [
   {
     titulo: "Ativa múltiplas áreas do cérebro ao mesmo tempo",
@@ -35,23 +37,13 @@ export default function Solucao() {
         </div>
         <div className="solucao-wrap">
           <div className="solucao-img">
-            <svg
-              viewBox="0 0 380 300"
-              xmlns="http://www.w3.org/2000/svg"
-              style={{ borderRadius: "16px", boxShadow: "0 8px 40px rgba(0,0,0,0.18)" }}
-            >
-              <rect width="380" height="300" rx="16" fill="#E8F5E9" />
-              <circle cx="190" cy="130" r="80" fill="#C8E6C9" opacity="0.5" />
-              <text x="190" y="100" fontFamily="Fredoka One,cursive" fontSize="52" fill="#2E7D32" textAnchor="middle" opacity="0.9">GA</text>
-              <text x="190" y="155" fontFamily="Fredoka One,cursive" fontSize="52" fill="#388E3C" textAnchor="middle" opacity="0.8">TO</text>
-              <text x="190" y="210" fontFamily="Nunito,sans-serif" fontSize="15" fill="#1B5E20" textAnchor="middle" fontWeight="700">ga-to • 2 sílabas</text>
-              <path d="M60,130 Q70,110 80,130 Q90,150 100,130" stroke="#66BB6A" strokeWidth="3" fill="none" />
-              <path d="M48,130 Q62,100 76,130 Q90,160 104,130" stroke="#81C784" strokeWidth="2" fill="none" opacity="0.6" />
-              <path d="M270,130 Q280,110 290,130 Q300,150 310,130" stroke="#66BB6A" strokeWidth="3" fill="none" />
-              <path d="M258,130 Q272,100 286,130 Q300,160 314,130" stroke="#81C784" strokeWidth="2" fill="none" opacity="0.6" />
-              <rect x="0" y="255" width="380" height="45" rx="0" fill="#2E7D32" />
-              <text x="190" y="284" fontFamily="Fredoka One,cursive" fontSize="16" fill="white" textAnchor="middle">Método Fonético + Grafomotor</text>
-            </svg>
+            <Image
+              src="/images/crianca-metodo.png"
+              alt="Criança executando o método Grafismo Fonético"
+              width={600}
+              height={600}
+              style={{ width: "100%", height: "auto", borderRadius: "16px", boxShadow: "0 8px 40px rgba(0,0,0,0.18)" }}
+            />
           </div>
           <div>
             <p className="subtitulo" style={{ marginBottom: "24px" }}>
