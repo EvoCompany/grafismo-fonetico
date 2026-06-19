@@ -385,6 +385,13 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   gap: 12px;
 }
+.autor-avatar-img {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--azul-claro);
+  flex-shrink: 0;
+}
 .autor-avatar {
   width: 44px; height: 44px;
   border-radius: 50%;

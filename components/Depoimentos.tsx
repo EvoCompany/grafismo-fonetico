@@ -1,33 +1,35 @@
+import Image from "next/image";
+
 const depoimentos = [
   {
     texto: "Em apenas 2 semanas minha filha já conseguia identificar todas as letras e formar sílabas. Estou impressionada com a evolução!",
     nome: "Ana Paula M.",
     info: "Mãe de menina de 5 anos",
-    avatar: "👩",
+    avatar: "/images/avatar-ana-paula.png",
   },
   {
     texto: "Meu filho tem TDAH e eu não acreditava que fosse funcionar. Em menos de 1 mês ele já está lendo palavrinhas. Método incrível!",
     nome: "Fernanda L.",
     info: "Mãe de menino de 7 anos",
-    avatar: "👩‍🦰",
+    avatar: "/images/avatar-fernanda.png",
   },
   {
     texto: "Minha filha adorou as atividades! É a primeira vez que ela pede para estudar sozinha. A metodologia é simples e os resultados são visíveis.",
     nome: "Juliana R.",
     info: "Mãe de menina de 6 anos",
-    avatar: "👩‍🦱",
+    avatar: "/images/avatar-juliana.png",
   },
   {
     texto: "Vale muito mais que o preço! Meu filho avançou um semestre em questão de semanas. A professora ficou surpresa com o progresso.",
     nome: "Marcos T.",
     info: "Pai de menino de 8 anos",
-    avatar: "🧑‍🦳",
+    avatar: "/images/avatar-marcos.png",
   },
   {
     texto: "Sou professora e recomendo para todas as mães. O método fonético é o mais eficaz que conheço e as atividades são muito bem elaboradas.",
     nome: "Carla S.",
     info: "Professora e mãe de 2 filhos",
-    avatar: "👩‍🏫",
+    avatar: "/images/avatar-carla.png",
   },
 ];
 
@@ -49,7 +51,14 @@ export default function Depoimentos() {
               <div className="estrelas">★★★★★</div>
               <blockquote>&ldquo;{d.texto}&rdquo;</blockquote>
               <div className="depoimento-autor">
-                <div className="autor-avatar">{d.avatar}</div>
+                <Image
+                  src={d.avatar}
+                  alt={d.nome}
+                  width={48}
+                  height={48}
+                  className="autor-avatar-img"
+                  style={{ borderRadius: "50%", objectFit: "cover" }}
+                />
                 <div>
                   <div className="autor-nome">{d.nome}</div>
                   <div className="autor-info">{d.info}</div>
