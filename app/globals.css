@@ -775,7 +775,7 @@ a { text-decoration: none; color: inherit; }
 /* ─── PURCHASE POPUP ─── */
 .purchase-popup {
   position: fixed;
-  bottom: 90px;
+  top: 56px;
   left: 20px;
   background: #fff;
   border-radius: 12px;
