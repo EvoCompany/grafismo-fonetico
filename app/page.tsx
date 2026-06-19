@@ -10,7 +10,7 @@ import Oferta from "@/components/Oferta";
 import Garantia from "@/components/Garantia";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
-import WhatsappFloat from "@/components/WhatsappFloat";
+// import WhatsappFloat from "@/components/WhatsappFloat";
 import PurchasePopup from "@/components/PurchasePopup";
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
       <Garantia />
       <FAQ />
       <Footer />
-      <WhatsappFloat />
+      {/* <WhatsappFloat /> */}
       <PurchasePopup />
     </>
   );
