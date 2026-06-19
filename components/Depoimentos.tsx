@@ -56,6 +56,8 @@ export default function Depoimentos() {
                   alt={d.nome}
                   width={48}
                   height={48}
+                  sizes="48px"
+                  loading="lazy"
                   className="autor-avatar-img"
                   style={{ borderRadius: "50%", objectFit: "cover" }}
                 />

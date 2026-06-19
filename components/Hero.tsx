@@ -12,6 +12,7 @@ export default function Hero() {
             width={1365}
             height={738}
             priority
+            sizes="(max-width: 900px) 100vw, 860px"
             style={{ width: "100%", height: "auto", display: "block", borderRadius: "12px" }}
           />
         </div>
