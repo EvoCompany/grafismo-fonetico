@@ -6,34 +6,35 @@ export default function ExitPopup() {
   const [dismissed, setDismissed] = useState(false);
   const [seconds, setSeconds] = useState(599);
   const shown = useRef(false);
-  const hashJustChanged = useRef(false);
+  const userJustClicked = useRef(false);
 
   const show = () => {
-    if (shown.current || dismissed) return;
+    // Nunca dispara se o usuário acabou de clicar em um link ou botão
+    if (userJustClicked.current || shown.current || dismissed) return;
     shown.current = true;
     setVisible(true);
   };
 
+  // Rastreia qualquer clique em link/botão na página.
+  // Durante 1s após o clique nenhum trigger de saída é aceito,
+  // evitando que navegação interna (#hash) acione o popup.
+  useEffect(() => {
+    const onUserClick = (e: MouseEvent) => {
+      if ((e.target as HTMLElement).closest("a, button")) {
+        userJustClicked.current = true;
+        setTimeout(() => { userJustClicked.current = false; }, 1000);
+      }
+    };
+    document.addEventListener("click", onUserClick, true);
+    return () => document.removeEventListener("click", onUserClick, true);
+  }, []);
+
   useEffect(() => {
     const baseUrl = window.location.href.split("#")[0];
 
-    // Rastreia cliques em links #hash para ignorar o popstate falso que
-    // Safari/iOS dispara durante navegação interna por âncora.
-    const onHashChange = () => {
-      hashJustChanged.current = true;
-      setTimeout(() => { hashJustChanged.current = false; }, 500);
-    };
-    window.addEventListener("hashchange", onHashChange);
-
-    // Back-button trap: empurra uma entrada com a MESMA URL (baseUrl).
-    // Quando o usuário tenta voltar, o browser navega para essa entrada
-    // duplicada — mesma URL, página não sai — popstate dispara e mostramos
-    // o popup. Continuamos empurrando a entrada para manter o usuário na página
-    // enquanto o popup está aberto. Após exibido, paramos de reempurrar.
     history.pushState(null, "", baseUrl);
 
     const onPopState = () => {
-      if (hashJustChanged.current) return;
       if (!shown.current) {
         show();
         history.pushState(null, "", baseUrl);
@@ -48,7 +49,6 @@ export default function ExitPopup() {
     document.addEventListener("mouseleave", onMouseLeave);
 
     return () => {
-      window.removeEventListener("hashchange", onHashChange);
       window.removeEventListener("popstate", onPopState);
       document.removeEventListener("mouseleave", onMouseLeave);
     };
