@@ -75,9 +75,6 @@ a { text-decoration: none; color: inherit; }
   font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.5px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 .urgencia-bar span { text-decoration: underline; }
 
@@ -854,10 +851,10 @@ a { text-decoration: none; color: inherit; }
   .oferta-cards-grid { grid-template-columns: 1fr; gap: 16px; }
   .bonus-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
 
-  /* Popup mobile: move to bottom-left, smaller size */
+  /* Popup mobile: top-left corner, smaller size */
   .purchase-popup {
-    top: auto;
-    bottom: 20px;
+    top: 16px;
+    bottom: auto;
     left: 16px;
     max-width: 220px;
     width: calc(100vw - 90px);
