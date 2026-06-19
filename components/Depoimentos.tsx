@@ -2,31 +2,31 @@ import Image from "next/image";
 
 const depoimentos = [
   {
-    texto: "Em apenas 2 semanas minha filha já conseguia identificar todas as letras e formar sílabas 😱 Estou impressionada com a evolução! Não acreditei até ver com meus próprios olhos 🥹❤️",
+    texto: "Em apenas 2 semanas minha filha já conseguia identificar todas as letras e formar sílabas. Estou impressionada com a evolução! 🥹",
     nome: "Ana Paula M.",
     info: "Mãe de menina de 5 anos",
     avatar: "/images/avatar-ana-paula.png",
   },
   {
-    texto: "Meu filho tem TDAH e eu não acreditava que fosse funcionar… Em menos de 1 mês ele já está lendo palavrinhas! 🙌 Método incrível, recomendo demais pra todas as mães! 💙",
+    texto: "Meu filho tem TDAH e eu não acreditava que fosse funcionar… Em menos de 1 mês ele já está lendo palavrinhas. Método incrível! 🙌",
     nome: "Fernanda L.",
     info: "Mãe de menino de 7 anos",
     avatar: "/images/avatar-fernanda.png",
   },
   {
-    texto: "Minha filha AMOU as atividades 😍 É a primeira vez que ela pede para estudar sozinha!! A metodologia é simples e os resultados aparecem rápido 🚀✨",
+    texto: "Minha filha adorou as atividades! É a primeira vez que ela pede para estudar sozinha. A metodologia é simples e os resultados aparecem rápido. 😊",
     nome: "Juliana R.",
     info: "Mãe de menina de 6 anos",
     avatar: "/images/avatar-juliana.png",
   },
   {
-    texto: "Vale MUITO mais que o preço! 🔥 Meu filho avançou um semestre inteiro em poucas semanas. A professora ficou surpresa com o progresso dele 😄 Super indico!",
+    texto: "Vale muito mais que o preço! Meu filho avançou um semestre em poucas semanas. A professora ficou surpresa com o progresso. 😄",
     nome: "Marcos T.",
     info: "Pai de menino de 8 anos",
     avatar: "/images/avatar-marcos.png",
   },
   {
-    texto: "Sou professora e recomendo para todas as famílias! 👩‍🏫 O método fonético é o mais eficaz que conheço e as atividades são muito bem elaboradas. Parabéns pelo trabalho! 👏🏼",
+    texto: "Sou professora e recomendo para todas as famílias. O método fonético é o mais eficaz que conheço e as atividades são muito bem elaboradas. 👏",
     nome: "Carla S.",
     info: "Professora e mãe de 2 filhos",
     avatar: "/images/avatar-carla.png",
