@@ -752,6 +752,33 @@ a { text-decoration: none; color: inherit; }
 .wave-divider svg { display: block; width: 100%; }
 
 /* ─── CONTAGEM REGRESSIVA ─── */
+.countdown-intro {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.80);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+.countdown-expired {
+  background: rgba(255,60,0,0.18);
+  border: 1px solid rgba(255,100,50,0.55);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  margin: 16px 0;
+  text-align: center;
+}
+.countdown-expired-titulo {
+  font-size: 15px;
+  font-weight: 900;
+  color: #FF6040;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+.countdown-expired-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.5;
+}
 .countdown-wrap {
   display: flex;
   justify-content: center;
