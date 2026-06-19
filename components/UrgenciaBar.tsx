@@ -1,8 +1,9 @@
 export default function UrgenciaBar() {
   return (
     <div className="urgencia-bar">
-      🔥 OFERTA POR TEMPO LIMITADO — Aproveite antes que o preço suba!{" "}
-      <span>Acesso imediato após pagamento</span>
+      <div>🔥 OFERTA POR TEMPO LIMITADO 🔥</div>
+      <div>Aproveite antes que o preço suba!</div>
+      <div>Acesso imediato após pagamento</div>
     </div>
   );
 }

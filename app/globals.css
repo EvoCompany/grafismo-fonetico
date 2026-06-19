@@ -71,12 +71,14 @@ a { text-decoration: none; color: inherit; }
   background: var(--laranja);
   color: var(--branco);
   text-align: center;
-  padding: 10px 20px;
-  font-size: 14px;
+  padding: 12px 20px;
   font-weight: 800;
   letter-spacing: 0.5px;
+  line-height: 1.7;
 }
-.urgencia-bar span { text-decoration: underline; }
+.urgencia-bar div:first-child { font-size: 15px; letter-spacing: 1px; }
+.urgencia-bar div:nth-child(2) { font-size: 13px; font-weight: 600; opacity: 0.95; }
+.urgencia-bar div:nth-child(3) { font-size: 12px; font-weight: 600; opacity: 0.80; }
 
 /* ─── HERO ─── */
 .hero {
