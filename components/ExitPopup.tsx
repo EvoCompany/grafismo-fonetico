@@ -47,18 +47,10 @@ export default function ExitPopup() {
     };
     document.addEventListener("mouseleave", onMouseLeave);
 
-    // Mobile: troca de app / minimiza navegador (não interfere com back-button
-    // porque o trap mantém a URL igual e a página não fica oculta)
-    const onVisibility = () => {
-      if (document.visibilityState === "hidden") show();
-    };
-    document.addEventListener("visibilitychange", onVisibility);
-
     return () => {
       window.removeEventListener("hashchange", onHashChange);
       window.removeEventListener("popstate", onPopState);
       document.removeEventListener("mouseleave", onMouseLeave);
-      document.removeEventListener("visibilitychange", onVisibility);
     };
   }, [dismissed]);
 
